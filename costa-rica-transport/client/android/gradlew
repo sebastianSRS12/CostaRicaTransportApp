@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+set -e
+
+DIR="$(cd "$(dirname "$0")" && pwd)"
+APP_NAME="transport-app"
+
+# Make sure the gradle wrapper is executable
+chmod +x "$DIR/gradlew"
+
+# Execute the gradle command
+exec "$DIR/gradlew" "$@"
